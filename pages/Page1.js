@@ -35,11 +35,11 @@ export default function Page1() {
             {
                 Departments.map((item, index) => {
                     return (
-                        <div key={"Parent_page1" + index} style={{ padding: 20, width: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <div key={"Parent_page1" + index} style={{ padding: 20, display: 'flex', flexDirection: 'column' }}>
                             <Button as="a" variant={item.expand ? "primary" : 'success'} style={{ margin: 10, width: 100 }} onClick={() => ExpansionHandler(item, index)}>
                                 {item.name}
                             </Button>
-                            <div style={{ width: '100%', display: 'flex', alignItems: 'center', }}>
+                            <div style={{ width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
                                 {
                                     item.children.length > 0 && item.expand
                                         ?
